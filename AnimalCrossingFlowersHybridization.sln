@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalCrossingFlowersHybridization.Client", "AnimalCrossingFlowersHybridization.Client\AnimalCrossingFlowersHybridization.Client.csproj", "{AAF7BD97-1DB7-4D41-9D0F-03D1B5532C40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalCrossingFlowersHybridization", "AnimalCrossingFlowersHybridization\AnimalCrossingFlowersHybridization.csproj", "{6546E653-D7D7-4A30-AE74-C944BE533FA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalCrossingFlowersHybridization.Tests", "AnimalCrossingFlowersHybridization.Tests\AnimalCrossingFlowersHybridization.Tests.csproj", "{293DD9D1-10F5-416E-B32A-E32BDADF91B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAF7BD97-1DB7-4D41-9D0F-03D1B5532C40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAF7BD97-1DB7-4D41-9D0F-03D1B5532C40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAF7BD97-1DB7-4D41-9D0F-03D1B5532C40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAF7BD97-1DB7-4D41-9D0F-03D1B5532C40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6546E653-D7D7-4A30-AE74-C944BE533FA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6546E653-D7D7-4A30-AE74-C944BE533FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6546E653-D7D7-4A30-AE74-C944BE533FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6546E653-D7D7-4A30-AE74-C944BE533FA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{293DD9D1-10F5-416E-B32A-E32BDADF91B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{293DD9D1-10F5-416E-B32A-E32BDADF91B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{293DD9D1-10F5-416E-B32A-E32BDADF91B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{293DD9D1-10F5-416E-B32A-E32BDADF91B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
