@@ -1,11 +1,18 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace AnimalCrossingFlowersHybridization
 {
     public class Locus
     {
-        public Gene Gene { get; init; }
+        public Locus(Gene gene, IEnumerable<char> traits)
+        {
+            Gene = gene;
+            Traits = traits.OrderBy(t => t).ToArray();
+        }
 
-        public IEnumerable<int> Traits { get; init; }
+        public Gene Gene { get; }
+
+        public IEnumerable<char> Traits { get; }
     }
 }

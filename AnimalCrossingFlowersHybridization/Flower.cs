@@ -7,5 +7,9 @@ namespace AnimalCrossingFlowersHybridization
         public Color Color { get; init; }
 
         public Genotype Genotype { get; init; }
+
+        public int Generation { get; init; }
+
+        public decimal Percentage { get; init; }
     }
 }
