@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace AnimalCrossingFlowersHybridization
 {
-    public class Genotype
+    public class Genotype : ValueObject
     {
         public Genotype(IEnumerable<Locus> locus)
         {
@@ -11,5 +11,10 @@ namespace AnimalCrossingFlowersHybridization
         }
 
         public IEnumerable<Locus> Locus { get; }
+
+        protected override IEnumerable<object> GetEqualityComponents()
+        {
+            return Locus;
+        }
     }
 }

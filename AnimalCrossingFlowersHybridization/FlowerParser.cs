@@ -23,7 +23,6 @@ namespace AnimalCrossingFlowersHybridization
             {
                 Assortment = Enum.Parse<Assortment>(texts[0], true),
                 Color = Enum.Parse<Color>(texts[1], true),
-                Generation = 1,
                 Genotype = new Genotype(texts[2]
                     .Split("-")
                     .Select(t => new Locus(Genes[t.ToUpper()[0]], new[] { t[0], t[1] }))),

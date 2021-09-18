@@ -26,7 +26,7 @@ namespace AnimalCrossingFlowersHybridization.Tests
                 }),
             };
 
-            actual.Should().BeEquivalentTo(expected, options => options.WithStrictOrdering());
+            actual.Should().Be(expected);
         }
     }
 }

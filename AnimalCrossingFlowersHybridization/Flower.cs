@@ -1,6 +1,8 @@
+using System.Collections.Generic;
+
 namespace AnimalCrossingFlowersHybridization
 {
-    public class Flower
+    public class Flower : ValueObject
     {
         public Assortment Assortment { get; init; }
 
@@ -8,8 +10,12 @@ namespace AnimalCrossingFlowersHybridization
 
         public Genotype Genotype { get; init; }
 
-        public int Generation { get; init; }
+        public int Generation { get; init; } = 1;
 
-        public decimal Percentage { get; init; }
+        protected override IEnumerable<object> GetEqualityComponents()
+        {
+            yield return Assortment;
+            yield return Genotype;
+        }
     }
 }

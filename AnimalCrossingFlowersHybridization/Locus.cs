@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace AnimalCrossingFlowersHybridization
 {
-    public class Locus
+    public class Locus : ValueObject
     {
         public Locus(Gene gene, IEnumerable<char> traits)
         {
@@ -14,5 +14,15 @@ namespace AnimalCrossingFlowersHybridization
         public Gene Gene { get; }
 
         public IEnumerable<char> Traits { get; }
+
+        protected override IEnumerable<object> GetEqualityComponents()
+        {
+            yield return Gene;
+            
+            foreach (var trait in Traits)
+            {
+                yield return trait;
+            }
+        }
     }
 }
