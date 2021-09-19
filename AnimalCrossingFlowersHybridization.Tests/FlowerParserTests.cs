@@ -20,9 +20,9 @@ namespace AnimalCrossingFlowersHybridization.Tests
                 Color = Color.White,
                 Genotype = new Genotype(new Locus[]
                 {
-                    new(Gene.Red, new[] { 'r', 'r' }),
-                    new(Gene.Yellow, new[] { 'y', 'y' }),
-                    new(Gene.White, new[] { 'W', 'w' }),
+                    new(new[] { 'r', 'r' }),
+                    new(new[] { 'y', 'y' }),
+                    new(new[] { 'W', 'w' }),
                 }),
             };
 

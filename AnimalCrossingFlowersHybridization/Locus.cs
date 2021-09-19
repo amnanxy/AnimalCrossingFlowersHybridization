@@ -5,10 +5,19 @@ namespace AnimalCrossingFlowersHybridization
 {
     public class Locus : ValueObject
     {
-        public Locus(Gene gene, IEnumerable<char> traits)
+        private static readonly Dictionary<char, Gene> GeneMapping = new()
         {
-            Gene = gene;
+            ['R'] = Gene.Red,
+            ['O'] = Gene.Orange,
+            ['Y'] = Gene.Yellow,
+            ['W'] = Gene.White,
+            ['S'] = Gene.Shade,
+        };
+
+        public Locus(IEnumerable<char> traits)
+        {
             Traits = traits.OrderBy(t => t).ToArray();
+            Gene = GeneMapping[char.ToUpper(Traits.First())];
         }
 
         public Gene Gene { get; }
@@ -18,7 +27,7 @@ namespace AnimalCrossingFlowersHybridization
         protected override IEnumerable<object> GetEqualityComponents()
         {
             yield return Gene;
-            
+
             foreach (var trait in Traits)
             {
                 yield return trait;
