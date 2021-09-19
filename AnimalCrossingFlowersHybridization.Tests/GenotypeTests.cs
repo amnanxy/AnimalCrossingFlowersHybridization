@@ -4,23 +4,15 @@ using NUnit.Framework;
 namespace AnimalCrossingFlowersHybridization.Tests
 {
     [TestFixture]
-    public class PunnettSquareTests
+    public class GenotypeTests
     {
-        [SetUp]
-        public void SetUp()
-        {
-            _punnettSquare = new PunnettSquare();
-        }
-
-        private PunnettSquare _punnettSquare;
-
         [Test]
         public void Monohybrid_Cross()
         {
             var genotype1 = CreateGenotype(CreateLocus('R', 'r'));
             var genotype2 = CreateGenotype(CreateLocus('R', 'r'));
 
-            var actual = _punnettSquare.Compute(genotype1, genotype2);
+            var actual = genotype1.Cross(genotype2);
 
             var expected = new[]
             {
@@ -39,7 +31,7 @@ namespace AnimalCrossingFlowersHybridization.Tests
             var genotype1 = CreateGenotype(CreateLocus('R', 'r'), CreateLocus('Y', 'y'));
             var genotype2 = CreateGenotype(CreateLocus('R', 'r'), CreateLocus('Y', 'y'));
 
-            var actual = _punnettSquare.Compute(genotype1, genotype2);
+            var actual = genotype1.Cross(genotype2);
 
             var expected = new[]
             {
