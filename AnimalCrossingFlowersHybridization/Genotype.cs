@@ -32,10 +32,7 @@ namespace AnimalCrossingFlowersHybridization
         private IEnumerable<Gamete> GetGametes()
         {
             return Locus
-                .Aggregate<Locus, Meiosis>(null, (current, locus) => new Meiosis(locus, current))
-                .Select(genes => new Gamete(genes));
+                .Aggregate<Locus, Meiosis>(null, (current, locus) => new Meiosis(locus, current));
         }
-
-        private record Gamete(IEnumerable<char> Genes);
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AnimalCrossingFlowersHybridization
 {
-    internal class Meiosis : IEnumerable<List<char>>
+    internal class Meiosis : IEnumerable<Gamete>
     {
         private readonly Locus _locus;
         private readonly Meiosis _meiosis;
@@ -14,20 +14,23 @@ namespace AnimalCrossingFlowersHybridization
             _meiosis = meiosis;
         }
 
-        public IEnumerator<List<char>> GetEnumerator()
+        public IEnumerator<Gamete> GetEnumerator()
         {
-            foreach (var trait in _locus.Traits)
+            if (_meiosis == null)
             {
-                if (_meiosis == null)
+                foreach (var trait in _locus.Traits)
                 {
-                    yield return new List<char> { trait };
+                    yield return new Gamete(new List<char> { trait });
                 }
-                else
+            }
+            else
+            {
+                foreach (var trait in _locus.Traits)
                 {
-                    foreach (var m in _meiosis)
+                    foreach (var gamete in _meiosis)
                     {
-                        m.Add(trait);
-                        yield return m;
+                        gamete.Genes.Add(trait);
+                        yield return gamete;
                     }
                 }
             }
