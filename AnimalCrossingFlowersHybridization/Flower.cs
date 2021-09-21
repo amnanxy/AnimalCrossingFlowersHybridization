@@ -14,14 +14,15 @@ namespace AnimalCrossingFlowersHybridization
 
         public int Generation { get; init; } = 1;
 
-        public decimal Probability { get; init; }
+        public decimal Probability { get; init; } = 1;
 
-        public IEnumerable<Flower> Parents { get; init; } = Enumerable.Empty<Flower>();
+        public IEnumerable<Flower> Parents { get; init; } = Array.Empty<Flower>();
 
         protected override IEnumerable<object> GetEqualityComponents()
         {
             yield return Assortment;
             yield return Genotype;
+            yield return Generation;
             yield return Probability;
 
             foreach (var parent in Parents)
@@ -40,7 +41,7 @@ namespace AnimalCrossingFlowersHybridization
                 {
                     Assortment = Assortment,
                     Color = colorMapping[t.Key],
-                    Generation = Math.Max(Generation, anotherParent.Generation),
+                    Generation = Math.Max(Generation, anotherParent.Generation) + 1,
                     Genotype = t.Key,
                     Probability = t.Count() / (decimal)genotypes.Count,
                     Parents = new[] { this, anotherParent },

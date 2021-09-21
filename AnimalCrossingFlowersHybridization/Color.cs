@@ -2,7 +2,7 @@ namespace AnimalCrossingFlowersHybridization
 {
     public enum Color
     {
-        None = 1,
+        None = 0,
         Black,
         Blue,
         Green,
