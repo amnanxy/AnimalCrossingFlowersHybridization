@@ -16,11 +16,15 @@ namespace AnimalCrossingFlowersHybridization.GeneDataBanks
             Seeds = GetSeedsRawData()
                 .Select(parser.Parse)
                 .ToArray();
+            
+            RareColor = Color.Green;
         }
 
         public static IReadOnlyList<Flower> All { get; }
 
         public static IReadOnlyList<Flower> Seeds { get; }
+
+        public static Color RareColor { get; }
 
         private static IEnumerable<string> GetSeedsRawData()
         {
