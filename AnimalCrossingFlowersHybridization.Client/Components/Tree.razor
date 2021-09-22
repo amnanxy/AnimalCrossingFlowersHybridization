@@ -1,0 +1,12 @@
+@using AnimalCrossingFlowersHybridization.Client.ViewModels.Flowers
+
+<div class="tf-tree tf-gap-lg tf-ancestor-tree">
+    <ul>
+        <TreeItem ViewModel="@ViewModel"></TreeItem>
+    </ul>
+</div>
+
+@code {
+    [Parameter]
+    public FlowerViewModel ViewModel { get; set; }
+}

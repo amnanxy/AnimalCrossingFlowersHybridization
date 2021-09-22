@@ -1,0 +1,25 @@
+@using AnimalCrossingFlowersHybridization.Client.ViewModels.Flowers
+
+<li>
+    <span class="tf-nc @ViewModel.Color">
+        <span class="node-text">
+            <div>編號: @ViewModel.No</div>
+            <div>顏色: @ViewModel.Name</div>
+            <div>基因: @ViewModel.Genotype &nbsp; @ViewModel.Probability.ToString("G29") %</div>
+        </span>
+    </span>
+    @if (ViewModel.Parents.Any())
+    {
+        <ul>
+            @foreach (var parent in ViewModel.Parents)
+            {
+                <TreeItem ViewModel="@parent"></TreeItem>
+            }
+        </ul>
+    }
+</li>
+
+@code {
+    [Parameter]
+    public FlowerViewModel ViewModel { get; set; }
+}

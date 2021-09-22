@@ -1,0 +1,14 @@
+.tf-ancestor-tree, ::deep .tf-ancestor-tree { position: relative; }
+.tf-ancestor-tree > ul, ::deep .tf-ancestor-tree > ul { transform: rotateX(180deg); }
+.tf-ancestor-tree li ul, ::deep .tf-ancestor-tree li ul { margin-bottom: 1em; }
+
+.node-text, ::deep .node-text {
+    display: inline-block;
+    transform: rotateX(180deg);
+    white-space: nowrap;
+}
+
+::deep .tf-nc {
+    border-radius: 0.4em;
+    font-weight: bold;
+}

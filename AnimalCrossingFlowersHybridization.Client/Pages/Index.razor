@@ -1,5 +1,40 @@
 ﻿@page "/"
+@inherits IndexBase
 
-<h1>Hello, world!</h1>
+<EditForm Model="@IndexViewModel" OnValidSubmit="SearchFlower">
+    <div >
+        品種:
+        <InputSelect @bind-Value="@IndexViewModel.Assortment">
+            @foreach (var assortment in Enum.GetValues<Assortment>().Where(t => t != Assortment.None))
+            {
+                <option value="@assortment">@assortment</option>
+            }
+        </InputSelect>
+    </div>
+    <div >
+        子代產生機率不得低於
+        <InputNumber @bind-Value="IndexViewModel.Probability" min="0" max="100" style="width: 60px"></InputNumber>
+        %
+    </div>
+    <div>
+        <button type="submit">搜尋</button>
+    </div>
 
-Welcome to your new app.
+    <ValidationSummary/>
+    <DataAnnotationsValidator/>
+</EditForm>
+
+@if (FlowerViewModels != null)
+{
+    @if (FlowerViewModels.Any())
+    {
+        @foreach (var viewModel in FlowerViewModels)
+        {
+            <Tree ViewModel="viewModel"></Tree>
+        }
+    }
+    else
+    {
+        <div>無法產生單一的稀有色花朵雜交路徑</div>
+    }
+}
