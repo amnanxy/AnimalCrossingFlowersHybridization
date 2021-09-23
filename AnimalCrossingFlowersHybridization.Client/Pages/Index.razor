@@ -23,7 +23,10 @@
     <ValidationSummary/>
     <DataAnnotationsValidator/>
 </EditForm>
-
+@if (IsLoading)
+{
+    <div class="loading">Loading&#8230;</div>
+}
 @if (FlowerViewModels != null)
 {
     @if (FlowerViewModels.Any())
