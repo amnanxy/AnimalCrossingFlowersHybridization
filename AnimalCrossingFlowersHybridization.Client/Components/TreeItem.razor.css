@@ -36,3 +36,7 @@
 .yellow {
     background-color: yellow;
 }
+
+.tf-tree.tf-gap-lg li {
+    padding: 0 0.2em;
+}

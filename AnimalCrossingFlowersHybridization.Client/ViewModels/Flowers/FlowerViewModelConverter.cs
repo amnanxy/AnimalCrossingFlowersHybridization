@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,6 +8,7 @@ namespace AnimalCrossingFlowersHybridization.Client.ViewModels.Flowers
     {
         private int _number = 1;
         private readonly Dictionary<Genotype, int> _dictionary = new();
+        private readonly HashSet<Genotype> _converted = new();
 
         public IReadOnlyList<FlowerViewModel> Convert(IEnumerable<Flower> flowers)
         {
@@ -22,9 +24,19 @@ namespace AnimalCrossingFlowersHybridization.Client.ViewModels.Flowers
                 number = _number++;
                 _dictionary[flower.Genotype] = number;
             }
-            
+
             var seedTips = flower.Parents.Any() ? string.Empty : "(seed)";
-            
+            FlowerViewModel[] parents;
+            if (_converted.Contains(flower.Genotype))
+            {
+                parents = Array.Empty<FlowerViewModel>();
+            }
+            else
+            {
+                parents= flower.Parents.Select(CreateViewModel).ToArray();
+                _converted.Add(flower.Genotype);
+            }
+
             return new FlowerViewModel
             {
                 No = number,
@@ -32,7 +44,7 @@ namespace AnimalCrossingFlowersHybridization.Client.ViewModels.Flowers
                 Color = flower.Color.ToString().ToLower(),
                 Genotype = string.Join("-", flower.Genotype.Locus.Select(t => string.Concat(t.Traits))),
                 Probability = flower.Probability * 100,
-                Parents = flower.Parents.Select(CreateViewModel).ToArray(),
+                Parents = parents,
             };
         }
     }
