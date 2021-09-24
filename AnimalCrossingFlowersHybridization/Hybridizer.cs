@@ -55,7 +55,7 @@ namespace AnimalCrossingFlowersHybridization
             foreach (var parentFlower in parentFlowers.Where(t => t.Color != _rareColor))
             {
                 _holdingFlowers.Add(parentFlower.Genotype, parentFlower);
-                foreach (var holdingFlower in _holdingFlowers.Values)
+                foreach (var holdingFlower in _holdingFlowers.Values.Reverse())
                 {
                     yield return parentFlower
                         .Cross(holdingFlower, _colorMapping)

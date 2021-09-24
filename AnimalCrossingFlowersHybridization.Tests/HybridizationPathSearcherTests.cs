@@ -115,6 +115,17 @@ namespace AnimalCrossingFlowersHybridization.Tests
             results.Count().Should().Be(0);
         }
 
+        [Test]
+        public void Self_Hybridization_Has_High_Priority()
+        {
+            var dataBank = DataBank.DataBanks[Assortment.Hyacinths];
+            var searcher = new HybridizationPathSearcher(dataBank);
+
+            var results = searcher.SearchColor(dataBank.RareColor, 0.07m);
+
+            results.First().Parents.First().Parents.All(t => t.Color == Color.Orange).Should().BeTrue();
+        }
+
         private static Flower CreateFlower(Color color, decimal probability, Genotype genotype, params Flower[] parents)
         {
             return new Flower
