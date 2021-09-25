@@ -2,6 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
+        <InvariantGlobalization>true</InvariantGlobalization>
+        <BlazorEnableTimeZoneSupport>false</BlazorEnableTimeZoneSupport>
     </PropertyGroup>
 
     <ItemGroup>
@@ -12,6 +14,10 @@
 
     <ItemGroup>
       <ProjectReference Include="..\AnimalCrossingFlowersHybridization\AnimalCrossingFlowersHybridization.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\sample-data\weather.json" />
     </ItemGroup>
 
 </Project>
