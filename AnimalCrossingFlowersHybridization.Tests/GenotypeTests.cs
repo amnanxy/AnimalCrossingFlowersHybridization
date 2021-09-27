@@ -62,7 +62,7 @@ namespace AnimalCrossingFlowersHybridization.Tests
 
         private static Locus CreateLocus(char gene1, char gene2)
         {
-            return new Locus(new[] { gene1, gene2 });
+            return Locus.Create(gene1, gene2);
         }
 
         private static Genotype CreateGenotype(params Locus[] locus)

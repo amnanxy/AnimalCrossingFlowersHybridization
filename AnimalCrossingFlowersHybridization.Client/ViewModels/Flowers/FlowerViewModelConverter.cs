@@ -33,7 +33,7 @@ namespace AnimalCrossingFlowersHybridization.Client.ViewModels.Flowers
             }
             else
             {
-                parents= flower.Parents.Select(CreateViewModel).ToArray();
+                parents = flower.Parents.Select(CreateViewModel).ToArray();
                 _converted.Add(flower.Genotype);
             }
 
@@ -42,7 +42,7 @@ namespace AnimalCrossingFlowersHybridization.Client.ViewModels.Flowers
                 No = number,
                 Name = $"{flower.Color} {seedTips}",
                 Color = flower.Color.ToString().ToLower(),
-                Genotype = string.Join("-", flower.Genotype.Locus.Select(t => string.Concat(t.Traits))),
+                Genotype = flower.Genotype.ToString(),
                 Probability = flower.Probability * 100,
                 Parents = parents,
             };

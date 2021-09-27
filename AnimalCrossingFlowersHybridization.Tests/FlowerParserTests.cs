@@ -18,11 +18,11 @@ namespace AnimalCrossingFlowersHybridization.Tests
                 Generation = 1,
                 Assortment = Assortment.Pansies,
                 Color = Color.White,
-                Genotype = new Genotype(new Locus[]
+                Genotype = new Genotype(new[]
                 {
-                    new(new[] { 'r', 'r' }),
-                    new(new[] { 'y', 'y' }),
-                    new(new[] { 'W', 'w' }),
+                    Locus.Create('r', 'r'),
+                    Locus.Create('y', 'y'),
+                    Locus.Create('W', 'w'),
                 }),
             };
 

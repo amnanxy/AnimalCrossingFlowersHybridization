@@ -5,7 +5,7 @@ namespace AnimalCrossingFlowersHybridization
 {
     public class HybridizationPathSearcher
     {
-        private readonly IReadOnlyDictionary<Genotype, Color> _colorMapping;
+        private readonly IReadOnlyDictionary<string, Color> _colorMapping;
         private readonly IReadOnlyList<Flower> _seeds;
         private readonly Color _rareColor;
 
@@ -13,7 +13,7 @@ namespace AnimalCrossingFlowersHybridization
         {
             _seeds = dataBank.Seeds;
             _rareColor = dataBank.RareColor;
-            _colorMapping = dataBank.All.ToDictionary(t => t.Genotype, t => t.Color);
+            _colorMapping = dataBank.All.ToDictionary(t => t.Genotype.ToString(), t => t.Color);
         }
 
         public IEnumerable<Flower> SearchColor(Color targetColor, decimal probabilityLimit)

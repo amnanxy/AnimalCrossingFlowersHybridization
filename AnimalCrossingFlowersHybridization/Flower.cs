@@ -31,18 +31,18 @@ namespace AnimalCrossingFlowersHybridization
             }
         }
 
-        public IReadOnlyList<Flower> Cross(Flower anotherParent, IReadOnlyDictionary<Genotype, Color> colorMapping)
+        public IReadOnlyList<Flower> Cross(Flower anotherParent, IReadOnlyDictionary<string, Color> colorMapping)
         {
             var genotypes = Genotype.Cross(anotherParent.Genotype);
 
             return genotypes
-                .GroupBy(t => t)
+                .GroupBy(t => t.ToString())
                 .Select(t => new Flower
                 {
                     Assortment = Assortment,
                     Color = colorMapping[t.Key],
                     Generation = Math.Max(Generation, anotherParent.Generation) + 1,
-                    Genotype = t.Key,
+                    Genotype = t.First(),
                     Probability = t.Count() / (decimal)genotypes.Count,
                     Parents = new[] { this, anotherParent },
                 })

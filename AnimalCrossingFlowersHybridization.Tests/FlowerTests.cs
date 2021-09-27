@@ -16,7 +16,7 @@ namespace AnimalCrossingFlowersHybridization.Tests
             var colorMapping = DataBank
                 .DataBanks[Assortment.Hyacinths]
                 .All
-                .ToDictionary(t => t.Genotype, t => t.Color);
+                .ToDictionary(t => t.Genotype.ToString(), t => t.Color);
 
             var actual = flower1.Cross(flower2, colorMapping);
 
@@ -47,7 +47,7 @@ namespace AnimalCrossingFlowersHybridization.Tests
 
         private static Locus CreateLocus(char gene1, char gene2)
         {
-            return new Locus(new[] { gene1, gene2 });
+            return Locus.Create(gene1, gene2);
         }
 
         private static Genotype CreateGenotype(params Locus[] locus)
