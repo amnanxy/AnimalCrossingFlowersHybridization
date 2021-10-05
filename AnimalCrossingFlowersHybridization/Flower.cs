@@ -48,5 +48,10 @@ namespace AnimalCrossingFlowersHybridization
                 })
                 .ToArray();
         }
+
+        public bool IsSeed()
+        {
+            return Generation == 1;
+        }
     }
 }
