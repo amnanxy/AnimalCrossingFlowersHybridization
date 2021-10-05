@@ -13,47 +13,47 @@
     border-radius: 0.4em;
     font-weight: bold;
 }
-/* /Components/TreeItem.razor.rz.scp.css */
-.red[b-1b7y8cj3s0] {
+/* /Components/TreeNode.razor.rz.scp.css */
+.red[b-n9kz9vc0x3] {
     background-color: red;
 }
 
-.blue[b-1b7y8cj3s0] {
+.blue[b-n9kz9vc0x3] {
     background-color: blue;
     color: white;
 }
 
-.black[b-1b7y8cj3s0] {
+.black[b-n9kz9vc0x3] {
     background-color: black;
     color: white;
 }
 
-.green[b-1b7y8cj3s0] {
+.green[b-n9kz9vc0x3] {
     background-color: green;
 }
 
-.orange[b-1b7y8cj3s0] {
+.orange[b-n9kz9vc0x3] {
     background-color: orange;
 }
 
-.pink[b-1b7y8cj3s0] {
+.pink[b-n9kz9vc0x3] {
     background-color: pink;
 }
 
-.purple[b-1b7y8cj3s0] {
+.purple[b-n9kz9vc0x3] {
     background-color: purple;
     color: white;
 }
 
-.white[b-1b7y8cj3s0] {
+.white[b-n9kz9vc0x3] {
     background-color: white;
 }
 
-.yellow[b-1b7y8cj3s0] {
+.yellow[b-n9kz9vc0x3] {
     background-color: yellow;
 }
 
-.tf-tree.tf-gap-lg li[b-1b7y8cj3s0] {
+.tf-tree.tf-gap-lg li[b-n9kz9vc0x3] {
     padding: 0 0.2em;
 }
 /* /Pages/Index.razor.rz.scp.css */
