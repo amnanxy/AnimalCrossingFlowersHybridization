@@ -1,7 +1,4 @@
-using System.Collections.Generic;
-using System.Linq;
-
-namespace AnimalCrossingFlowersHybridization.GeneDataBanks
+namespace AnimalCrossingFlowersHybridization.Infrastructure.GeneDataBanks
 {
     public class MumsDataBank
     {

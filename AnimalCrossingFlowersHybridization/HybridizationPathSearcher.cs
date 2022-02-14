@@ -9,7 +9,7 @@ namespace AnimalCrossingFlowersHybridization
         private readonly IReadOnlyList<Flower> _seeds;
         private readonly Color _rareColor;
 
-        public HybridizationPathSearcher(DataBank dataBank)
+        public HybridizationPathSearcher(IDataBank dataBank)
         {
             _seeds = dataBank.Seeds;
             _rareColor = dataBank.RareColor;

@@ -1,9 +1,8 @@
-using System.Collections.Generic;
-using AnimalCrossingFlowersHybridization.GeneDataBanks;
+using AnimalCrossingFlowersHybridization.Infrastructure.GeneDataBanks;
 
-namespace AnimalCrossingFlowersHybridization
+namespace AnimalCrossingFlowersHybridization.Infrastructure
 {
-    public class DataBank
+    public class DataBank : IDataBank
     {
         static DataBank()
         {

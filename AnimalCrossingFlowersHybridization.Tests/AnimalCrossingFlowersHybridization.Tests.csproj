@@ -15,6 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\AnimalCrossingFlowersHybridization.Infrastructure\AnimalCrossingFlowersHybridization.Infrastructure.csproj" />
       <ProjectReference Include="..\AnimalCrossingFlowersHybridization\AnimalCrossingFlowersHybridization.csproj" />
     </ItemGroup>
 

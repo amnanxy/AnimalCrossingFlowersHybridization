@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalCrossingFlowersHybrid
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalCrossingFlowersHybridization.Tests", "AnimalCrossingFlowersHybridization.Tests\AnimalCrossingFlowersHybridization.Tests.csproj", "{293DD9D1-10F5-416E-B32A-E32BDADF91B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalCrossingFlowersHybridization.Infrastructure", "AnimalCrossingFlowersHybridization.Infrastructure\AnimalCrossingFlowersHybridization.Infrastructure.csproj", "{C8183623-92B0-404F-99B4-DAC7C38133BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{293DD9D1-10F5-416E-B32A-E32BDADF91B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{293DD9D1-10F5-416E-B32A-E32BDADF91B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{293DD9D1-10F5-416E-B32A-E32BDADF91B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8183623-92B0-404F-99B4-DAC7C38133BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8183623-92B0-404F-99B4-DAC7C38133BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8183623-92B0-404F-99B4-DAC7C38133BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8183623-92B0-404F-99B4-DAC7C38133BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
