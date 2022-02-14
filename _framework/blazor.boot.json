@@ -7,8 +7,9 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "AnimalCrossingFlowersHybridization.Client.dll": "sha256-kiJXpT3pQQgsAuM+LofaWdqHJN9PY5UmJHjDDwbOAq8=",
-      "AnimalCrossingFlowersHybridization.dll": "sha256-BtQh4gcB8Ngxvfq5H9zUByaxWdHmiHn1chNhtGciRjs=",
+      "AnimalCrossingFlowersHybridization.Client.dll": "sha256-n\/7wFSx\/Ne1Qo1sKww2hoqioHwJiPvfp98VgiYQMHOU=",
+      "AnimalCrossingFlowersHybridization.dll": "sha256-5XdkDzWolac3aKDQ34Ea7jpzv3NONiN5aY9RLDt4R9o=",
+      "AnimalCrossingFlowersHybridization.Infrastructure.dll": "sha256-Q3+F3Yz3HOJZ5AP5sWpF7tbqG7D8Vazl5ajug5VoR6U=",
       "Microsoft.AspNetCore.Components.dll": "sha256-sXxXmKxCFvF4ieJfLKt2uFtHcFfSmwc3OPmgKSGMOik=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-OTFwEs5wXpvsoZaYAVoYwmtQYydFQ\/1ULaLA8KKpiQk=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-WlMOne3mzkbwujTRNMFev+a2EZ2R5e7E1Iw012NgAcM=",
