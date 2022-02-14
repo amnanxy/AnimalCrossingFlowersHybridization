@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AnimalCrossingFlowersHybridization
+namespace AnimalCrossingFlowersHybridization.Common
 {
     // reference: https://enterprisecraftsmanship.com/posts/value-object-better-implementation/
     public abstract class ValueObject
